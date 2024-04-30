@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { postApi } from "./redux/services/postApi";
+import { postApi } from "@/services/postApi";
+import storeReducer from '@/slices/storeSlice';
 
 export const store = configureStore({
     reducer: {
-        [postApi.reducerPath]: postApi.reducer
+        [postApi.reducerPath]: postApi.reducer,
+        store: storeReducer
     },
     devTools: process.env.NODE_ENV !== "production",
     middleware: (getDefaultMiddleware) =>

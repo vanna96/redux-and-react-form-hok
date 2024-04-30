@@ -1,5 +1,5 @@
 import { createPost } from '@/api/postSlice';
-import { AppDispatch } from '@/store';
+import { AppDispatch } from '@/app/store';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 

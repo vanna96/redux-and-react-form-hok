@@ -1,4 +1,4 @@
-import { useGetPostsQuery } from "@/redux/services/postApi";
+import { useGetPostsQuery } from "@/services/postApi";
 
 function PostList() {
     const { data:posts, isFetching } = useGetPostsQuery(null);
